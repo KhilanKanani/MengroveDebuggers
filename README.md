@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/4a6dd680-6316-4610-a786-6bb0bcb752b7
+**URL**: https://mengrove-debuggers.vercel.app
 
 Got it 👍 You want a tech stack recommendation for your Community Mangrove project (the one with maps, reports, points/coins, dashboards, etc.).
 Here’s a solid modern, full-stack tech stack that balances free services, scalability, and developer productivity:
