@@ -271,7 +271,7 @@ export default function Dashboard() {
                 <p className="text-muted-foreground">Visual overview of all mangrove incidents</p>
               </div>
               <Button variant="hero" asChild>
-                <a href="/submit-report">
+                <a href="/addreport">
                   <Plus className="h-4 w-4 mr-2" />
                   Add Report
                 </a>
@@ -302,7 +302,7 @@ export default function Dashboard() {
                 <p className="text-muted-foreground">Community incident reports and their status</p>
               </div>
               <Button variant="hero" asChild>
-                <a href="/submit-report">
+                <a href="/addreport">
                   <Plus className="h-4 w-4 mr-2" />
                   Submit New Report
                 </a>
