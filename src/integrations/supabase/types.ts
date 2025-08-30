@@ -14,7 +14,161 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      badges: {
+        Row: {
+          created_at: string
+          description: string | null
+          icon: string | null
+          id: string
+          name: string
+          points_required: number | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name: string
+          points_required?: number | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name?: string
+          points_required?: number | null
+        }
+        Relationships: []
+      }
+      mangrove_reports: {
+        Row: {
+          created_at: string
+          description: string
+          id: string
+          incident_type: string
+          latitude: number
+          location_description: string | null
+          longitude: number
+          photos: string[] | null
+          priority: number | null
+          severity: string | null
+          status: string | null
+          title: string
+          updated_at: string
+          user_id: string
+          verified_at: string | null
+          verified_by: string | null
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: string
+          incident_type: string
+          latitude: number
+          location_description?: string | null
+          longitude: number
+          photos?: string[] | null
+          priority?: number | null
+          severity?: string | null
+          status?: string | null
+          title: string
+          updated_at?: string
+          user_id: string
+          verified_at?: string | null
+          verified_by?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: string
+          incident_type?: string
+          latitude?: number
+          location_description?: string | null
+          longitude?: number
+          photos?: string[] | null
+          priority?: number | null
+          severity?: string | null
+          status?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+          verified_at?: string | null
+          verified_by?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          organization: string | null
+          phone: string | null
+          points: number | null
+          total_reports: number | null
+          updated_at: string
+          user_id: string
+          user_role: string | null
+          verified_reports: number | null
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          organization?: string | null
+          phone?: string | null
+          points?: number | null
+          total_reports?: number | null
+          updated_at?: string
+          user_id: string
+          user_role?: string | null
+          verified_reports?: number | null
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          organization?: string | null
+          phone?: string | null
+          points?: number | null
+          total_reports?: number | null
+          updated_at?: string
+          user_id?: string
+          user_role?: string | null
+          verified_reports?: number | null
+        }
+        Relationships: []
+      }
+      user_badges: {
+        Row: {
+          badge_id: string
+          earned_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          badge_id: string
+          earned_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          badge_id?: string
+          earned_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_badges_badge_id_fkey"
+            columns: ["badge_id"]
+            isOneToOne: false
+            referencedRelation: "badges"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
