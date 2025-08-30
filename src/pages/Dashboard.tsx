@@ -88,12 +88,18 @@ export default function Dashboard() {
     }
   };
 
+  const handleReportSubmitted = (newReport: Report) => {
+    setReports((prev) => [newReport, ...prev]); // instantly add to reports
+    fetchUserProfile(); // refresh points + totals
+  };
+
+
   const fetchReports = async () => {
     try {
       const { data, error } = await supabase
         .from('mangrove_reports')
         .select('*')
-        .order('created_at', { ascending: false });
+
 
       if (error) throw error;
       setReports(data || []);
@@ -240,7 +246,7 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {reports.slice(0, 5).map((report) => (
+                  {reports.map((report) => (
                     <div key={report.id} className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-center space-x-4">
                         <div className="h-2 w-2 rounded-full bg-primary"></div>
