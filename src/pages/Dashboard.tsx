@@ -97,12 +97,16 @@ export default function Dashboard() {
 
       if (error) throw error;
       setReports(data || []);
+
+      // Also refresh profile counts
+      fetchUserProfile();
     } catch (error: any) {
       toast.error('Error fetching reports: ' + error.message);
     } finally {
       setLoading(false);
     }
   };
+
 
   const handleSignOut = async () => {
     const { error } = await signOut();
@@ -269,7 +273,7 @@ export default function Dashboard() {
               <Button variant="hero" asChild>
                 <a href="/submit-report">
                   <Plus className="h-4 w-4 mr-2" />
-                  Submit Report
+                  Add Report
                 </a>
               </Button>
             </div>
