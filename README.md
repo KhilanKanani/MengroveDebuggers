@@ -4,70 +4,41 @@
 
 **URL**: https://lovable.dev/projects/4a6dd680-6316-4610-a786-6bb0bcb752b7
 
-## How can I edit this code?
+Got it 👍 You want a tech stack recommendation for your Community Mangrove project (the one with maps, reports, points/coins, dashboards, etc.).
+Here’s a solid modern, full-stack tech stack that balances free services, scalability, and developer productivity:
 
-There are several ways of editing your application.
+🌱 Frontend
+* Framework: React + Vite (fast, modern dev setup)
+* UI Styling: TailwindCSS (+ shadcn/ui for ready-made components like cards, modals, sidebar)
+* Maps:
+    * Leaflet.js (with React-Leaflet)
+    * Tiles from OpenStreetMap (free)
+    * State Management: Redux Toolkit or TanStack Query (to cache Supabase queries easily)
+    * Notifications: Sonner (lightweight toast system)
 
-**Use Lovable**
+🌿 Backend / Database
+* Supabase (free tier)
+* PostgreSQL DB for reports, profiles, gamification (points, verified reports, etc.)
+* Authentication (email, Google, GitHub logins)
+* Row-level security for user-specific data
+* Realtime subscriptions (live updates when reports are added)
+* Database logic: SQL triggers (like the one we wrote for points & verified reports)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4a6dd680-6316-4610-a786-6bb0bcb752b7) and start prompting.
+🌍 Maps & Geospatial
+* OpenStreetMap tiles (free alternative to Google Maps)
+* Nominatim API (for reverse geocoding addresses ↔ lat/lng)
+* Optional: Mapbox (free tier) if you want nicer styled maps & clustering
 
-Changes made via Lovable will be committed automatically to this repo.
+🛠️ APIs & Integrations
+* Supabase Edge Functions (for custom server logic, e.g., sending emails when reports are verified)
+* EmailJS or Resend (if you want notifications to users)
+* Geocoding: Nominatim or OpenCage Data (free tier up to some limits)
 
-**Use your preferred IDE**
+🎨 Design / UX
+* NextUI or shadcn/ui for polished components
+* Framer Motion for smooth animations (badges, points increment animation, etc.)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4a6dd680-6316-4610-a786-6bb0bcb752b7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+📊 Gamification Layer
+* Points & badges stored in profiles table
+* Leaderboard UI → query sorted by points
+* Triggers in DB update counts automatically when reports are created/verified
