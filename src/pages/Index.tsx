@@ -276,7 +276,7 @@ const Index = () => {
             <img src={mangroveIcon} alt="Mangrove Watch" className="h-8 w-8 rounded-full" />
             <span className="font-semibold">Mangrove Watch</span>
           </div>
-          <p>© 2024 Mangrove Watch. Protecting coastal ecosystems through community action.</p>
+          <p>© 2025 Mangrove Watch. Protecting coastal ecosystems through community action.</p>
         </div>
       </footer>
     </div>
