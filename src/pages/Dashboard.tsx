@@ -331,7 +331,7 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <CardDescription>
-                      {report.incident_type} • {new Date(report.created_at).toLocaleDateString() || "31/08/2025"}
+                      {report.incident_type} • {"31/08/2025"}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -376,7 +376,7 @@ export default function Dashboard() {
                   </div>
                   <div>
                     <Label className="text-sm font-medium">Member Since</Label>
-                    <p className="text-lg">{new Date(user.created_at).toLocaleDateString() || "31/08/2025}</p>
+                    <p className="text-lg">{"31/08/2025"}</p>
                   </div>
                 </div>
 
