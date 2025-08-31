@@ -2,6 +2,7 @@
 
 * **URL**: https://mengrove-debuggers.vercel.app
 * **YouTube Live** : https://youtu.be/OQJypLg2IKI
+* **PPT Live** : https://drive.google.com/file/d/1OEVLN_Mh9pSwkZuz4DEhJ4JpCWGfiFhW/view?usp=drivesdk
 
 You want a tech stack recommendation for your Community Mangrove project (the one with maps, reports, points/coins, dashboards, etc.).
 Here’s a solid modern, full-stack tech stack that balances free services, scalability, and developer productivity:
