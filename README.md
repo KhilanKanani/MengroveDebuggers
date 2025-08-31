@@ -3,7 +3,7 @@
 * **URL**: https://mengrove-debuggers.vercel.app
 * **YouTube Live** : https://youtu.be/OQJypLg2IKI
 
-Got it 👍 You want a tech stack recommendation for your Community Mangrove project (the one with maps, reports, points/coins, dashboards, etc.).
+You want a tech stack recommendation for your Community Mangrove project (the one with maps, reports, points/coins, dashboards, etc.).
 Here’s a solid modern, full-stack tech stack that balances free services, scalability, and developer productivity:
 
 🌱 Frontend
