@@ -1,7 +1,5 @@
 # Welcome to your Lovable project
 
-## Project info
-
 **URL**: https://mengrove-debuggers.vercel.app
 ------------
 **YouTube Live** : https://youtu.be/OQJypLg2IKI
